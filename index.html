@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav__logo">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav">
+        <div class="nav__menu">
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Our Tours</li>
+                <li>Customer Stories</li>
+                <li>Book a tour today</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <h1>Tours Offered</h1>
+    <div class="parent">
+        <div class="card everest">
+            <div class="card__pic">
+                <h3>Mount Everest</h3>
+            </div>
+            <div class="card__info">
+                <ul class="card__features">
+                    <li>3 day Trek</li>
+                    <span></span>
+                    <li>Guided by a trained Sherpa</li>
+                    <span></span>
+                    <li>All equipment provided</li>
+                    <span></span>
+                    <li>Extremely Dangerous</li>
+                    <span></span>
+                    <li>All ages</li>
+                    <span></span>
+                </ul>
+                <div class="card__signup">
+                    <button>Sign Up Today</button>
+                </div>
+            </div>
+        </div>
+        <div class="card rainforest">
+            <div class="card__pic ">
+                <h3>The Rainforest</h3>
+            </div>
+            <div class="card__info">
+                <ul class="card__features">
+                    <li>10 day Trek</li>
+                    <span></span>
+                    <li>No guide -- Good luck</li>
+                    <span></span>
+                    <li>Food provided by rainforest</li>
+                    <span></span>
+                    <li>Beyond Dangerous</li>
+                    <span></span>
+                    <li>All ages</li>
+                    <span></span>
+                </ul>
+                <div class="card__signup">
+                    <button>Sign Up Today</button>
+                </div>
+            </div>
+        </div>
+        <div class="card underwater">
+            <div class="card__pic">
+                <h3>Underwater</h3>
+            </div>
+            <div class="card__info">
+                <ul class="card__features">
+                    <li>~ 5 minutes, max</li>
+                    <span></span>
+                    <li>No guide</li>
+                    <span></span>
+                    <li>No equipment</li>
+                    <span></span>
+                    <li>Death is certain</li>
+                    <span></span>
+                    <li>18+</li>
+                    <span></span>
+                </ul>
+                <div class="card__signup">
+                    <button>Sign Up Today</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const nav = document.querySelector('.nav');
+    const logo = document.querySelector('.nav__logo');
+    const links = document.querySelectorAll('.nav__menu ul li');
+
+    logo.addEventListener('click', () => {
+        nav.classList.toggle('nav__toggle');
+        links.forEach(i => {
+            i.style.transform = 'rotateY(0deg)';
+            i.style.opacity = '1';
+        })
+    });
+    </script>
+</body>
+</html>

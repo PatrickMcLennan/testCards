@@ -1,0 +1,272 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+li {
+    list-style-type: none;
+}
+
+h1 {
+    font-family: 'Helvetica';
+    font-weight: 100;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin: 0 10rem;
+    line-height: 150%;
+}
+/* BASICS */
+.parent {
+    width: 90%;
+    flex: .75 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 25rem;
+}
+/* BORDERS */
+.card span {
+    width: 25%;
+    height: 1px;
+    background-color: rgba(23, 35, 138, .5);
+}
+/* PICTURES */
+.card__pic {
+    flex: .3;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-blend-mode: screen;
+    border-bottom-right-radius: 5rem;
+    margin: 1rem;
+    box-shadow: 0 1rem 3rem black;
+}
+.card__pic h3 {
+    color: white;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 100;
+    font-size: 2rem;
+    margin: 0 2rem 1rem 0;
+    padding: 1rem;
+    box-shadow: 0 1rem 3rem black;
+    text-shadow: 0 1rem 3rem black;
+    border-bottom-right-radius: 3rem;
+}
+/* FEATURE LIST */
+.card__info {
+    flex: .7;
+    display: flex;
+    flex-direction: column;
+}
+.card__features {
+    flex: .7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card__features li {
+    font-family: Helvetica;
+    letter-spacing: .25rem;
+    font-size: 1.5rem;
+    width: 90%;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+}
+/* SIGNUP */
+.card__signup {
+    flex: .3;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.card__signup button {
+    font-size: 2rem;
+    border: none;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    letter-spacing: .5rem;
+    font-weight: 100;
+    padding: 1.25rem;
+    color: white;
+    border-bottom-right-radius: 3rem;
+    transition: all .5s;
+    box-shadow: 0 1rem 3rem black;
+    text-shadow: 0 1rem 3rem black;
+
+}
+.card__signup button:hover {
+    box-shadow: 0 1rem 3rem black;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.card__signup button:active {
+    transform: scale(0.95);
+    box-shadow: 0 .5rem 1.5rem black;
+}
+/* Everest specifics */
+.everest .card__pic {
+    background-color: rgb(23, 35, 138);
+    background-image: url('everest.jpg');
+}
+.everest .card__pic h3 {
+    background-color: rgba(23, 35, 138, .75);
+}
+.everest span {
+    background-color: rgba(23, 35, 138, .5);
+}
+.everest button {
+    background-image: linear-gradient(45deg, rgb(23, 35, 138), rgba(23, 35, 138, 0));
+}
+.everest button:active,
+.everest button:focus,
+.everest button:visited {
+    outline: 1px solid rgba(23, 35, 138, .5);
+}
+/* Rainforest Specifics */
+.rainforest .card__pic {
+    background-color: rgb(68, 68, 38);
+    background-image: url('rainforest.jpg');
+}
+.rainforest .card__pic h3 {
+    background-color: rgba(68, 68, 38, .75);
+}
+.rainforest span {
+    background-color: rgba(68, 68, 38, .5);
+}
+.rainforest button {
+    background-image: linear-gradient(45deg, rgba(68, 68, 38, 1), rgba(68, 68, 38, 0));
+}
+.rainforest button:active,
+.rainforest button:focus,
+.rainforest button:visited {
+    outline: 1px solid rgb(68, 68, 38);
+}
+/* Underwater Specifics */
+.underwater .card__pic {
+    background-color: rgb(25, 95, 211);
+    background-image: url('underwater.jpg');
+}
+.underwater .card__pic h3 {
+    background-color: rgba(25, 95, 211, .75);
+}
+.underwater span {
+    background-color: rgba(25, 95, 211, .5);
+}
+.underwater button {
+    background-image: linear-gradient(45deg, rgba(25, 95, 211, 1), rgba(25, 95, 211, 0));
+}
+.underwater button:active,
+.underwater button:focus,
+.underwater button:visited {
+    outline: 1px solid rgba(25, 95, 211, .75);
+}
+/* NAV  */
+.nav {
+    position: fixed;
+    z-index: 9997;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: all .35s;
+    padding: 5rem;
+    background: rgba(0,0,0,.75);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition-timing-function: ease-out;
+}
+.nav__toggle {
+    transform: scaleX(1);
+}
+.nav__logo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    padding: 0;
+}
+.nav__logo:active {
+    transform: scale(.9);
+    padding: 1.25rem 0;
+}
+.nav__logo {
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    height: 6rem;
+    width: 6rem;
+    box-shadow: 0 1rem 3rem black;
+    border-radius: 100%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all .3s;
+    background-image: linear-gradient(45deg, white, rgba(255, 255, 255, .25));
+}
+.nav__logo span {
+    height: 1px;
+    width: 50%;
+    background-color: black;
+}
+.nav__menu {
+    /* flex: 1; */
+    text-align: right;
+    z-index: 9998;
+    position: fixed;
+    top: 15rem;
+}
+.nav__menu li {
+    font-size: 2.5rem;
+    font-family: Helvetica;
+    font-weight: 100;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    line-height: 300%;
+    border-left: 1px solid rgb(23, 35, 138);
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    vertical-align: center;
+    background-image: linear-gradient(45deg, white, rgba(255, 255, 255, .25));
+    transform-style: preserve-3d;
+    perspective: 100rem;
+    transform: rotateY(90deg);
+    transition: all .25s;
+    transition-delay: .25s;
+    transform-origin: 100%;
+    transition-timing-function: ease-out;
+    opacity: 0;
+}
+.nav__menu li:not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+.nav__menu li:hover {
+    transform: translateX(-1rem);
+    box-shadow: 0 1rem 3rem black;
+    cursor: pointer;
+}
